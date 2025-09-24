@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\mainTask.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\mainTask.dir/objects.a @CMakeFiles\mainTask.dir\objects1.rsp
+C:\msys64\ucrt64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\mainTask.dir/objects.a -Wl,--no-whole-archive -o mainTask.exe -Wl,--out-implib,libmainTask.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mainTask.dir\linkLibs.rsp

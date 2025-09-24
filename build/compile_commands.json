@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=c17 -Wall -Wextra -Wpedantic -o CMakeFiles\\mainTask.dir\\src\\MainTask.c.obj -c C:\\Users\\Manuel\\Desktop\\UNIVERSIDAD\\ED\\TaskSchedulerWorkSpace\\src\\MainTask.c",
+  "file": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/src/MainTask.c",
+  "output": "CMakeFiles/mainTask.dir/src/MainTask.c.obj"
+},
+{
+  "directory": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=c17 -Wall -Wextra -Wpedantic -o CMakeFiles\\mainTask.dir\\src\\Task.c.obj -c C:\\Users\\Manuel\\Desktop\\UNIVERSIDAD\\ED\\TaskSchedulerWorkSpace\\src\\Task.c",
+  "file": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/src/Task.c",
+  "output": "CMakeFiles/mainTask.dir/src/Task.c.obj"
+},
+{
+  "directory": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=c17 -Wall -Wextra -Wpedantic -o CMakeFiles\\mainSch.dir\\src\\MainScheduler.c.obj -c C:\\Users\\Manuel\\Desktop\\UNIVERSIDAD\\ED\\TaskSchedulerWorkSpace\\src\\MainScheduler.c",
+  "file": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/src/MainScheduler.c",
+  "output": "CMakeFiles/mainSch.dir/src/MainScheduler.c.obj"
+},
+{
+  "directory": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=c17 -Wall -Wextra -Wpedantic -o CMakeFiles\\mainSch.dir\\src\\Scheduler.c.obj -c C:\\Users\\Manuel\\Desktop\\UNIVERSIDAD\\ED\\TaskSchedulerWorkSpace\\src\\Scheduler.c",
+  "file": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/src/Scheduler.c",
+  "output": "CMakeFiles/mainSch.dir/src/Scheduler.c.obj"
+},
+{
+  "directory": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe   -g -std=c17 -Wall -Wextra -Wpedantic -o CMakeFiles\\mainSch.dir\\src\\Task.c.obj -c C:\\Users\\Manuel\\Desktop\\UNIVERSIDAD\\ED\\TaskSchedulerWorkSpace\\src\\Task.c",
+  "file": "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/src/Task.c",
+  "output": "CMakeFiles/mainSch.dir/src/Task.c.obj"
+}
+]

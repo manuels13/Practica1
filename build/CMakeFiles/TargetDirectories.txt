@@ -1,0 +1,4 @@
+C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build/CMakeFiles/mainTask.dir
+C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build/CMakeFiles/mainSch.dir
+C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build/CMakeFiles/edit_cache.dir
+C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build/CMakeFiles/rebuild_cache.dir

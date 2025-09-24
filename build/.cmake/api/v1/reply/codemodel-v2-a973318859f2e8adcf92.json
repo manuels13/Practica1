@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Practica1",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mainSch::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainSch-Debug-5da5371a3da669ca4570.json",
+					"name" : "mainSch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainTask::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainTask-Debug-5ad754a183cbdd2fa45d.json",
+					"name" : "mainTask",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace/build",
+		"source" : "C:/Users/Manuel/Desktop/UNIVERSIDAD/ED/TaskSchedulerWorkSpace"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

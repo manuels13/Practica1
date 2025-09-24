@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\mainSch.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\mainSch.dir/objects.a @CMakeFiles\mainSch.dir\objects1.rsp
+C:\msys64\ucrt64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\mainSch.dir/objects.a -Wl,--no-whole-archive -o mainSch.exe -Wl,--out-implib,libmainSch.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mainSch.dir\linkLibs.rsp
