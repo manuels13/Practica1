@@ -23,14 +23,17 @@ size_t Scheduler_size(const struct Node* p_last){
  *        se pone a NULL al finalizar.
  */
 void Scheduler_clear(struct Node** p_p_last){
-  struct Node *temp;
-  while((*p_p_last)->p_next!=NULL){
-    temp=p_p_last;
-    Task_free((*p_p_last)->task);
-    free(p_p_last);
-    *p_p_last=NULL;
-    (*p_p_last)->p_next=temp->p_next;
+  struct Node *ultimo= (*p_p_last);
+  struct Node *current = ultimo->p_next;
+  struct Node *aux;
+  while(current!=ultimo){
+   aux=current;
+   current=current->p_next;
+   Task_free(&(aux->task));
+   free(aux);
   }
+  Task_free(&(ultimo->task));
+  free(ultimo);
 }
 
 /**
@@ -54,4 +57,41 @@ bool Scheduler_enqueue(struct Node **p_p_last, const struct Task *p_task){
   (*p_p_last)->p_next=nuevo;
   *p_p_last=nuevo;
   return true;
+}
+/**
+ * @brief Obtiene una copia en memoria dinámica de la primera tarea del planificador.
+ * @param p_last Puntero al último nodo de la cola (puede ser NULL).
+ * @return Puntero a una copia de la primera Task, o NULL si la cola está vacía.
+ * @note El llamador es responsable de liberar la Task devuelta.
+ */
+struct Task* Scheduler_first(const struct Node* p_last){
+  if(p_last==NULL){
+    return NULL;
+  }
+  return Task_copyOf(p_last->p_next->task);
+}
+/**
+ * @brief Desencola la primera tarea del planificador.
+ * @param p_p_last Dirección de memoria donde está el puntero al último nodo de la cola;
+ *        puede actualizarse y quedar en NULL si se vacía.
+ * @note Si la cola está vacía, no hace nada.
+ * @return True en caso de poder encolar, falso en caso contrario (scheduler no inicializado, no se puede pedir memoria, etc)
+ */
+bool Scheduler_dequeue(struct Node * *p_p_last){
+  if((*p_p_last)==NULL){
+    return false;
+  }
+  struct Node *primero = (*p_p_last)->p_next;
+  (*p_p_last)->p_next=primero->p_next;
+  Task_free(&(primero->task));
+  free(primero);
+}
+  /**
+ * @brief Imprime todas las tareas del planificador.
+ * @param p_last Puntero al último nodo de la cola.
+ */
+void Scheduler_print(const struct Node* p_last){
+  struct Node *ultimo = p_last;
+  
+
 }
