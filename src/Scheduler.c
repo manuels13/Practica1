@@ -17,6 +17,21 @@ size_t Scheduler_size(const struct Node* p_last){
   }
   return contador;
 }
+/**
+ * @brief Elimina todas las tareas del planificador y lo deja vacío.
+ * @param p_p_last Dirección de memoria donde está almacenado el puntero al último nodo de la cola;
+ *        se pone a NULL al finalizar.
+ */
+void Scheduler_clear(struct Node** p_p_last){
+  struct Node *temp;
+  while((*p_p_last)->p_next!=NULL){
+    temp=p_p_last;
+    Task_free((*p_p_last)->task);
+    free(p_p_last);
+    *p_p_last=NULL;
+    (*p_p_last)->p_next=temp->p_next;
+  }
+}
 
 /**
  * @brief Encola al final una copia de la tarea dada.
@@ -30,11 +45,13 @@ bool Scheduler_enqueue(struct Node **p_p_last, const struct Task *p_task){
   if(nuevo==NULL){
     return false;
   }
+  if(*p_p_last==NULL){
+    *p_p_last=nuevo;
+    (*p_p_last) -> p_next=*p_p_last;
+  }
   nuevo->task=Task_copyOf(p_task);;
   nuevo->p_next=(*p_p_last)->p_next;
   (*p_p_last)->p_next=nuevo;
   *p_p_last=nuevo;
-
-
-
+  return true;
 }
