@@ -23,17 +23,23 @@ size_t Scheduler_size(const struct Node* p_last){
  *        se pone a NULL al finalizar.
  */
 void Scheduler_clear(struct Node** p_p_last){
-  struct Node *ultimo= (*p_p_last);
-  struct Node *current = ultimo->p_next;
-  struct Node *aux;
-  while(current!=ultimo){
-   aux=current;
-   current=current->p_next;
-   Task_free(&(aux->task));
-   free(aux);
+  if((*p_p_last)==NULL){
+    perror("Lista ya vacia");
+    exit(1);
   }
-  Task_free(&(ultimo->task));
-  free(ultimo);
+  struct Node *last = *p_p_last;
+  struct Node *current = (*p_p_last)->p_next;
+  struct Node *temp;
+  while(current!=last){
+    temp=current;
+    Task_free(&(temp->task));
+    current=current->p_next;
+    free(temp);
+  }
+  Task_free(&(last->task));
+  free(last);
+  *p_p_last= NULL;
+
 }
 
 /**
@@ -85,13 +91,24 @@ bool Scheduler_dequeue(struct Node * *p_p_last){
   (*p_p_last)->p_next=primero->p_next;
   Task_free(&(primero->task));
   free(primero);
+  return true;
 }
   /**
  * @brief Imprime todas las tareas del planificador.
  * @param p_last Puntero al último nodo de la cola.
  */
 void Scheduler_print(const struct Node* p_last){
-  struct Node *ultimo = p_last;
+  if(p_last==NULL){
+    perror("Lista vacia");
+    return;
+  }
+  struct Node *last = p_last;
+  struct Node *current = p_last->p_next;
+  while(current!=last){
+    Task_print(current->task);
+    current=current->p_next;
+  }
+  Task_print(last->task);
   
 
 }
