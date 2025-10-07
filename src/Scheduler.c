@@ -112,3 +112,19 @@ void Scheduler_print(const struct Node* p_last){
   
 
 }
+
+/**
+ * @brief Avanza el planificador una posición (rota la cola).
+ * @param p_p_last Dirección de memoria donde está el puntero al último
+nodo de la cola;
+ * pasa a apuntar al nuevo último.
+ * @note Si la cola está vacía o tiene un único elemento, el estado
+efectivo no cambia.
+ */
+void Scheduler_step(struct Node** p_p_last){
+  if((*p_p_last)==NULL||(*p_p_last)->p_next==(*p_p_last)){
+    return;
+  }
+  *p_p_last=(*p_p_last)->p_next;
+
+}
